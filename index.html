@@ -46,7 +46,6 @@
       backdrop-filter: blur(10px);
     }
 
-    /* LOADING */
     #preloader {
       background: #fff; 
       transition: opacity 0.75s ease, visibility 0.75s ease;
@@ -96,7 +95,6 @@
 
 <body class="text-gray-800" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 50)">
 
-  <!-- Preloader -->
   <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center">
     <img src="https://uploads.onecompiler.io/43w9rf9r9/44666gjfy/P%20(5).png" alt="Loading Logo" id="preloader-logo"/>
     <div class="progress-bar-container">
@@ -104,7 +102,6 @@
     </div>
   </div>
 
-  <!-- Header / Navigasi -->
   <header :class="scrolled ? 'header-scrolled shadow-lg' : 'bg-transparent'" class="sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#" aria-label="Beranda Bamsayota University Fair">
@@ -127,7 +124,7 @@
   </header>
 
   <main>
-    <!-- Bagian Hero -->
+
     <section class="relative min-h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-white"></div>
         <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center relative z-10">
@@ -147,7 +144,6 @@
                 </div>
             </div>
             <div class="relative animate__animated animate__fadeInRight">
-                <!-- Ganti gambar placeholder dengan gambar yang relevan -->
                 <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop" alt="Mahasiswa ceria di pameran universitas" class="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500" />
                 <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-2xl text-center animate__animated animate__bounce animate__infinite" style="animation-duration: 4s">
                     <p class="text-2xl font-bold gradient-text">50+</p>
@@ -157,7 +153,6 @@
         </div>
     </section>
 
-    <!-- Bagian Tentang Acara -->
     <section id="about" class="py-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="bg-white p-10 rounded-2xl shadow-xl animate__animated animate__fadeInUp">
@@ -183,7 +178,7 @@
         </div>
     </section>
 
-    <!-- Bagian Universitas Peserta -->
+  
     <section id="universities" class="py-24 bg-blue-50">
         <div class="max-w-7xl mx-auto px-6">
             <h3 class="text-4xl font-bold gradient-text text-center animate__animated animate__fadeIn">
@@ -287,7 +282,6 @@
         </div>
     </section>
 
-    <!-- Bagian Jadwal Acara -->
     <section id="schedule" class="py-24">
         <div class="max-w-4xl mx-auto px-6">
             <h3 class="text-4xl font-bold gradient-text text-center">Jadwal Acara 📅</h3>
@@ -333,11 +327,9 @@
         </div>
     </section>
 
-    <!-- Bagian Pendaftaran (PERBAIKAN TATA LETAK) -->
+
     <section id="register" class="py-24 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-            
-            <!-- Kolom Kiri: Info -->
             <div class="animate__animated animate__fadeInLeft">
                 <h3 class="text-4xl font-bold">Informasi Penting 📢</h3>
                 <ul class="mt-6 space-y-4">
@@ -373,7 +365,7 @@
             </div>
 
            <div class="animate__animated animate__fadeInRight">
-                <h3 class="text-3xl font-bold text-white mb-6"></h3> <!-- Tambah Judul -->
+                <h3 class="text-3xl font-bold text-white mb-6"></h3> 
                 <p class="text-gray-300 mb-8"> 
                 </p>
                 <a href="https://forms.gle/5qSJBEWBUwKir674A" 
@@ -393,7 +385,6 @@
         </div>
     </section>
 
-    <!-- Bagian Sponsor -->
     <section id="sponsors" class="py-16 sm:py-24 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -406,7 +397,7 @@
           <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-6">
             
             <div class="flex items-center justify-center p-5 bg-white border border-gray-200 rounded-lg">
-              <img class="max-h-20 w-auto object-contain" src="https://uploads.onecompiler.io/43w9rf9r9/446depqyq/P%20(16).png" alt="Logo Sponsor 1">
+              <img class="max-h-20 w-auto object-contain" src="https://uploads.onecompiler.io/43w9rf9r9/446fu5b3m/gambar_2025-12-03_160509871.png" alt="Logo Sponsor 1">
             </div>
 
             <div class="flex items-center justify-center p-5 bg-white border border-gray-200 rounded-lg">
@@ -447,7 +438,6 @@
       </div>
     </section>
 
-    <!-- Bagian Kontak & Lokasi -->
     <section id="contact" class="py-24 bg-gradient-to-b from-blue-50 to-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
             <div>
@@ -473,7 +463,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
         <p>© 2025 Bamsayota University Fair. All Rights Reserved.</p>
@@ -481,7 +470,6 @@
     </div>
   </footer>
   
-  <!-- Tombol Kembali ke Atas -->
   <button x-show="scrolled" @click="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg btn-glow" aria-label="Kembali ke atas">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
@@ -507,6 +495,7 @@
   </script>
 </body>
 </html>
+
 
 
 
